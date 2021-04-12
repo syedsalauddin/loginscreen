@@ -7,8 +7,8 @@ export default class Register extends Component {
   constructor() {
     super();
     this.state = {
-      name: "Tavant",
-      email: "",
+      name: "Syed",
+      email: "syed@gmail.com",
       password: "",
       password2: "",
       errors: {}
@@ -50,7 +50,7 @@ export default class Register extends Component {
           <div class="row">
             <div class="col-md-8 m-auto">
               <h1 class="display-4 text-center">Sign Up</h1>
-              <p class="lead text-center">Create your DevConnector account</p>
+              <p class="lead text-center">Create your account</p>
               <form onSubmit={this.registerSubmit}>
                 <div class="form-group">
                   <input type="text" className={classnames('form-control form-control-lg', { 'is-invalid': errors.name })} placeholder="Name" name="name" value={this.state.name} onChange={this.onChange} />
@@ -58,7 +58,6 @@ export default class Register extends Component {
                 </div>
                 <div class="form-group">
                   <input type="email" className={classnames('form-control form-control-lg', { 'is-invalid': errors.email })} placeholder="Email Address" name="email" value={this.state.email} onChange={this.onChange} />
-                  <small className="form-text text-muted">This site uses Gravatar so if you want a profile image, use a Gravatar email</small>
                   <div className="d-block invalid-feedback">{errors.email}</div>
                 </div>
                 <div class="form-group">
